@@ -1,0 +1,14 @@
+public class IdentityHashMap<K,​V>extends AbstractMap<K,​V>implements Map<K,​V>, Serializable, Cloneable?QQQ+QQQДа, появился с версии 1.4.
+!!!!!
+Создается ли емкость на 21 элемент, когда мы создаем IdentityHashMap, используя конструктор по умолчанию?QQQ+QQQДа.
+!!!!!
+IdentityHashMap сравнивает элементы, используя метод equals()?QQQ-QQQHashMap сравнивает элементы по значениям, а IdentityHashMap - по ссылкам.
+!!!!!
+Обеспечивает ли IdentityHashMap постоянное время для добавленя и получения элемента?QQQ+QQQДа, обеспечивает.
+!!!!!
+Формирование хеш происходит при помощи System.identityHashCode(Object)?QQQ+QQQДа, в отличии от HashMap, где используется метод hashCode().
+!!!!!
+Соблюдается ли контракт на карту Map методов equals() и hashCode()?QQQ-QQQНет,так как сравненин происходит по ссылкам, а хеш вычисляется при помощи System.identityHashCode(Object).
+!!!!!
+Если для IdentityHashMap вызвать 2 раза метод put() с одинаковым ключом и разным значением перезатрет ли значение?QQQ-QQQНет, создаст новое, так как IdentityHashMap проверяет ключи по ==.
+!!!!!

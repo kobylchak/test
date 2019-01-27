@@ -1,0 +1,43 @@
+ArrayList - динамический массив, который может изменять свой размер в процессе выполнения программы?QQQ+QQQВобрал лучшее от List и от Array.
+!!!!!
+Лучше ли создавать коллекции через родителя, например List<String> list = new ArrayList<>();?QQQ+QQQДа, потому что через время реализации могут меняться.
+!!!!!
+Возможна ли такая реализация ArrayList list = new ArrayList();?QQQ+QQQДа, raw type - сырой тип. Такая реализация приводит к ошибкам.
+!!!!!
+Мы в ArrayList можем удалить элемент методом remove(), а в массиве нет метода для удаления элемента delete() или remove()?QQQ+QQQВ ArrayList мы удаляем элемент, причем все последующие элементы сдвиг. на одну позицию.
+!!!!!
+При вызове метода arrayList.remove(arrayList.size) мы не только удалим последний элемент, но и вернем его, учитывая что arrayList заполнен несколькими эллементами.QQQ-QQQ
+Мы получим IndexOutOfBoundsException, потому что вышли за пределы arrayList. Мы удалим и вернем последний элемент с помощью метода arrayList.remove(arrayList.size() - 1).
+!!!!!
+Метод trimToSize() - стирает весь size до capacity? QQQ-QQQ Чтоб не занимать лишний расход в памяти — мы удаляем лишнее capacity до size нашего arrayList методом trimToSize().
+!!!!!
+Мы можем преобразовать ArrayList в HashSet одной строкой, с учетом того, что list заполнен? QQQ+QQQSet<String> set = new HashSet<>(list).
+!!!!!
+Мы можем одним вызовом из List получить List со всеми элементами, кроме первых 3 и последних 3. QQQ+QQQList<Integer> sublist = listArray.sublist(3,listArray.size()-3);
+!!!!!
+Пропорционально ли время поиска элемента contain() колличеству элементов в списке?QQQ+QQQДа, пропорционально время = O(N).
+!!!!!
+ArrayList отличается от Vector тем, что у ArrayList методы не синхронизированы?QQQ+QQQВ Vector методы синхронизированы, что обеспечивает потокобезопасность, но приводит к снижению производительности кода.
+!!!!!
+ArrayList уступает LinkedList когда необходимо в средину List  вставлять или удалять элементы?QQQ+QQQLinkedList в этом случае лучше, потому что не нужно перемещать части массива.
+!!!!!
+Когда мы создаем объект ArrayList, то сразу выделяется память на 10 ячеек. т.е. capacity = 10 элементов?QQQ+QQQДа, DEFAULT_CAPACITY по умолчанию - 10 элементов.
+!!!!!
+Если при добавлении элемента в ArrayList превышается его объем, то новая емкость расчитывается по формуле oldCapacity + 1?QQQ-QQQnewCapacity = oldCapacity + (oldCapacity>>1), т.е. в 1.5 раза.
+!!!!!
+ArrayList хранит данные в виде массива?QQQ+QQQДа. ArrayList - динамический массив, с дополнительными методами, реализовавший интерфейс List.
+!!!!!
+Вставка элемента в конец списка осуществляется за время O(1)?QQQ+QQQДа, но если вместимость массива недостаточна, то O(n), потому что происходит создание нового массива с увеличенным размером и копирование всех элементов в новый с помощью нативного метода System.arraycopy().
+!!!!!
+ArrayList уступает LinkedList при выполнении метода add()?QQQ+QQQДа, хоть в ArrayList отрабатывает System.arraycopy(), но LinkedList хранит ссылку на предыдущий и следующий элемент.
+!!!!!
+Можно перебрать ArrayList в обратном порядке?QQQ+QQQfor(int i=0; i < arrayList.size(); i++){int j = arrayList.size() - i - 1; sout(arrayList.get(i));}
+!!!!!
+Можно написать ArrayList<List>list=new ArrayList<ArrayList>()?QQQ-QQQНет, существуют ограничения использования generics types.
+!!!!!
+Возможно ли преобразовать List<String> list = new ArrayList<>() (заполненый несколькими элементами) в массив?QQQ+QQQString[]array = list.toArray(new String[list.size()-1]);
+!!!!!
+loadFactor в ArrayList<E> по default = 75%?QQQ-QQQНет такого понятия loadFactor в ArrayList.
+!!!!!
+Поддерживает ли CopyOnWrityArrayList многопоточный доступ?QQQ+QQQДа, поддерживает.
+!!!!!

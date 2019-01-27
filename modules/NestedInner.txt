@@ -1,0 +1,15 @@
+Метод, принадлежащий Inner(non-static) классу, может обращаться к private-методу класса(предка), в котором он лежит(Inner)?QQQ+QQQМожет, потому что имеет ссылку на instace предка от которого создан.
+!!!!!
+Метод, принадлежащий Nested(static) классу, может обращаться к private методу или полю класса, в котором и лежит наш Nested.QQQ-QQQНе может, потому что не имеет ссылку на instace предка.
+!!!!!
+Nested(static) классы могут содержать в себе Inner(non-static) классы?QQQ+QQQ да, могут содержать как Nested так и Inner классы.
+!!!!!
+Inner(non-static) классы могут содержать в себе Nested(static) классы?QQQ-QQQInner(non-static) классы могут содержать в себе только Inner(non-static) классы.
+!!!!!
+Nested(static) классы могут содержать в себе нестатические методы?QQQ+QQQNested(static) классы могут содержать как static методы, так и не static методы.
+!!!!!
+Inner(non-static) классы могут содержать в себе static методы?QQQ-QQQInner(non-static) классы могут содержать только не static методы.
+!!!!!
+Inner(non-static) классы могут быть private protected, static?QQQ-QQQInner(non-static) классы могут быть только public или package(по умолчанию).
+!!!!!
+Nested(static) классы могут быть protected, public, static?QQQ+QQQДа, могут.

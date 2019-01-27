@@ -1,0 +1,39 @@
+Deque(Double Ended Queue) - это линейная коллекция, которая поддерживает вставку элементов с обоих концов?QQQ+QQQDeque определяет поведение двунарпавленой очереди.
+!!!!!
+Deque пришел в java c 6 версии?QQQ+QQQДа, Deque пришел в java c 6 версии.
+!!!!!
+Deque расширяет интерфейс Queue?QQQ+QQQДа, Deque расширяет Queue.
+!!!!!
+Deque работает только по принципу FIFO?QQQ-QQQDeque могут сртоится по принципу FIFO и LIFO.
+!!!!!
+void addFirst(E obj), void addLast(E obj) - добавляют элементы в начало и в конец очереди?QQQ+QQQДа, без возвращения эл.
+!!!!!
+E getFirst() - возвращает без удаления элемент из головы очереди?QQQ+QQQДа, еcли очередь пуста - NoSuchElementException.
+!!!!!
+E getLast() - возвращает без удаления последний элемент очереди?QQQ+QQQДа, еcли очередь пуста - NoSuchElementException.
+!!!!!
+boolean offerFirst(E obj) - добавляет элемент в начало очереди?QQQ+QQQДа, если element добавлен - true, иначе - false?
+!!!!!
+boolean offerLast(E obj) - добавляет элемент в конец очереди?QQQ+QQQДа, если element добавлен - true, иначе - false?
+!!!!!
+Cтек - структура данных, построенная на принципе LIFO?QQQ+QQQДа, каждое значение добавляется на "вершину" стека. При извлечении элемента он удаляется из структуры.
+!!!!!
+E removeFirst(E obj) - возвращает с удалением элемент из начала очереди?QQQ+QQQДа, если очередь пуста - NoSuchElementException.
+!!!!!
+E peekFirst(), E peekLast() - возвращают элементы без удалентя либо с начала, либо с конца очереди?QQQ+QQQДа, если очередь пуста - null.
+!!!!!
+E pollFirst(), E pollLast() - возвращают с удалением элементы из начала очереди?QQQ+QQQДа, если очередь пуста, возвращают null.
+!!!!!
+E pop() - возвращает с удалением елемент из начала очереди?QQQ-QQQДа, если очередь пуста  - NoSuchElementException.
+!!!!!
+void push(E element) - добавляет элемент в самое начало очереди?QQQ+QQQДа.
+!!!!!
+ArrayDeque<>() - это реализация интерфейса Deque?QQQ+QQQДа, может работать не только по принципу FIFO, но и LIFO.
+!!!!!
+Методы E pop(), void push(E element) пришли из стека?QQQ+QQQДа.
+!!!!!
+Можно ли сказать, что ArrayDeque вытиснил cтек?QQQ+QQQArrayDeque работает, как стек, даже быстрее.
+!!!!!
+ArrayDeque initial capacity = 16 элементов?QQQ+QQQВерно совершенно.
+!!!!!
+

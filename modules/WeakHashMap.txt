@@ -1,0 +1,8 @@
+WeakHashMap<K,​V> extends AbstractMap<K,​V>implements Map<K,​V>, Serializable, Cloneable?QQQ-QQQpublic class WeakHashMap<K,​V>extends AbstractMap<K,​V>implements Map<K,​V> не implements Serializable, Clonable, появилась с версии 1.2.
+!!!!!
+Позволяет ли WeekHashMap для GC удалять из карты значения по ключу?QQQ+QQQДа, если ссылка на ключ - Week Reference.
+!!!!!
+Есть WeekReference - cоответственно WeekHashMap, есть SoftReference - есть ли SoftHashMap?QQQ+QQQРеализована в Apache.
+!!!!!
+Есть WeekReference - cоответственно WeekHashMap, есть FantomReference - есть ли FantomHashMap?QQQ-QQQНет, потому что метод get() всегда возвращает null.
+!!!!!
