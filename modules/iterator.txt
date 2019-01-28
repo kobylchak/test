@@ -1,0 +1,24 @@
+Интерфейс Collection расширяет интерфейс Iterable?QQQ+QQQВсе коллекции реализуют Collection, который расширяет интерфейс Iterable.
+!!!!!
+Iterable cодержит метод Iterator<T> iterator(); {...}?QQQ+QQQДа, содержит.
+!!!!!
+Можно с помощью Iterator поочередно возвращать все элементы коллекции?QQQ+QQQДа, методами next() hasNext().
+!!!!!
+Iterator встроенный в цикле forEach?QQQ+QQQДа, lо версии 1.5 не было forEach — необходимо было создавать iterator и пробегать им по циклу.
+!!!!!
+Iterator - интерфейс, предоставляющий доступ к элементам коллекции(массива или контейнера) и навигацию по ним?QQQ+QQQДа, E next(), boolean hasNext(), void remove().
+!!!!!
+Позволяет ли ListIterator вставлять и заменять элементы, производить перебор элементов в двух направлениях?QQQ+QQQListIterator extends Iterator, "+" иммеет свои методы previous(), hasPrevious(), previousIndex(), nextIndex(),причем курсор находится между элементами.
+!!!!!
+Ocновное различие Enumeration от Iterator - это наличие в Iterator метода remove()?QQQ+QQQc помощью метода remove() можем удалять элемент из коллекции при обходе.
+!!!!!
+Мы можем изменить сам объект с помощью итератора в цикле?QQQ-QQQС помощью итератора в цикле мы можем изменить поле объекта, но не сам объект.
+!!!!!
+Можна ли вернуть следущий элемент iterator.next(), если iterator указывает на последний элемент коллекции?QQQ-QQQNoSuchElementException.
+!!!!!
+Можно ли пропустить 10 елементов вызвав 10 раз iterator.hasNext(), а потом iterator.next()?QQQ-QQQbooleat hasNext() возвращает true наличии следующего элемента.
+!!!!!
+Коректно ли вызвать iterator.remove(), не вызывая перед этим iterator.hext()?QQQ-QQQнет, получим IllegalStateException().
+!!!!!
+Изменится ли итератор, если в коллекции вызвать метод collection.remove(...)?QQQ-QQQКоллекция не изменится, но при следующем вызове его методов возникнет исключение ConcurrentModificationException.
+!!!!!

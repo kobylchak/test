@@ -1,0 +1,8 @@
+Collections - это интерфейс?QQQ-QQQCollections  - это класс, появился в java c 1.2 версии.
+!!!!!
+Можем ли в методе возвращать пустую коллекцию?QQQ+QQQДа, используя статические методы класса Collections: emptyMap(), emptySet(). return Collections.emptyList();.
+!!!!!
+Можно ли синхронизировать коллекцию с помощью СollectionS?QQQ+QQQДа, Collections.synchronizedList(list);
+!!!!!
+Можем ли мы создать коллекцию таким образом, чтоб её никто не мог изменить?QQQ+QQQДа, Collections.unmodifiableList(list);
+!!!!!

@@ -1,0 +1,16 @@
+EnumMap<K extends Enum<K>, V> extends AbstractMap<K,V> implements Serializable, Clonable?QQQ+QQQДа, появился с версии 1.5.
+!!!!!
+Позволяет ли использование элементов перечисления в качестве ключей в EnumMap делать EnumMap на базе массива?QQQ+QQQДа.
+!!!!!
+В EnumMap initial_capacity 16 элементов?QQQ-QQQКонструкторы в EnumMap не пустые, поэтому capacity по default не создается.
+!!!!!
+Можем ли использовать собственный алгоритм сортировки, передавая Comparator в EnumMap<K,V>?QQQ-QQQНет, EnumMap не принимает в Comparator в конструктор. В каком порядке прописаны в Enum, в таком и будем извлекать.
+!!!!!
+Enum появились с версии 1.5 являются синхронизироваными?QQQ-QQQЯвляются несинхронизированы, но можем решить так Map<EnumKey, Value> map = Collections.synchronizedMap(new EnumMap<EnumKey, Value>(...));
+!!!!!
+Если в качестве ключей содержать Enum, то они отрабатывать будут намного медление обычных ключей?QQQ-QQQНет, Enum будут отрабатывать быстрее.
+!!!!!
+В EnumMap<K,V> можем передать null в качестве ключа?QQQ-QQQНельзя NullPointerException.
+!!!!!
+В EnumMap<K,V> можем передать null в качестве значения?QQQ+QQQМожем.
+!!!!!
